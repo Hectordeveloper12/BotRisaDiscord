@@ -9,7 +9,7 @@ module.exports = (client) =>{
                 const embedi = new EmbedBuilder()
                 .setTitle( 'Cancelar Ticket' )
                 .setDescription(`Iremos prosseguir com o atendimento... Aguarde o administrador entrar em contato.`)
-                .setColor(0x763ee7)
+                .setColor(0x564FCC)
                 .setTimestamp()
                 .setFooter({text: 'Equipe Risa Development'})
 

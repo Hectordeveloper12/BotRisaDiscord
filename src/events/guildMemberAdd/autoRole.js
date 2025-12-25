@@ -20,7 +20,7 @@ module.exports = async (client, member) => {
     const embedi = new EmbedBuilder()
             .setTitle( 'Bem vindo a Risa' )
             .setDescription(`Olá ${member.user}! 🎈\n\nEstamos muito felizes em ter você conosco na **${member.guild.name}**! 🥳\n\nAqui estão algumas coisas para você fazer:\n- **Leia as regras** no canal regras 📜\n- **Participe** das conversas e divirta-se! 💬\n\nSe precisar de ajuda, não hesite em chamar um moderador ou usar o comando !help.`)
-            .setColor(0x763ee7)
+            .setColor(0x564FCC)
             .setTimestamp()
             .setFooter({text: 'Equipe Risa Development'})
             .setThumbnail('https://cdn.discordapp.com/attachments/1446566190217560254/1453563557596626994/logo.png?ex=694de80e&is=694c968e&hm=162e6e6b4003b160d8e0d8e3328d095344694063bb5b9e682eb37062852844a2&')

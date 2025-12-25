@@ -4,25 +4,28 @@ module.exports =(client, interaction) => {
     client.on(Events.InteractionCreate, async interaction => {
         if (!interaction.isModalSubmit()) return;
         if (interaction.customId === 'myModal') {
-            const channelId = '1228058834006839439'; 
+            const channelId = '1453802543065989371';
             const channel = client.channels.cache.get(channelId);
             if (!channel) return console.error(`Não foi possível encontrar o canal de ID ${channelId}.`);
             
             const sugestion = interaction.fields.getTextInputValue('sugestionInput');
             const detail = interaction.fields.getTextInputValue('detailInput');
+            const stack = interaction.fields.getTextInputValue('stackInput');
+            const detalhes = interaction.fields.getTextInputValue('detalhesInput');
     
             const embedi = new EmbedBuilder()
-            .setTitle( 'Sugestões RisaDev' )
-            .setDescription(`Obrigado ${interaction.user} por sua sugestão! Estamos sempre buscando melhorar para nossos clientes. Tenha um ótimo dia!\n\n\n`)
+            .setTitle( 'Apresentação RisaDev' )
+            .setDescription(`Olá ${interaction.user} obrigado por entrar no servidor, seja bem vindo e obrigado por se apresentar.\n\n\n`)
             .addFields(
-        { name: 'Sugestão', value: "```"+`${sugestion}`+"```", inline: true },
-		{ name: 'Detalhes', value: "```"+`${detail}`+"```", inline: true },
-		{ name: 'Status', value: "```"+'Está sendo avaliada pelo administrador'+"```"},
+        { name: 'Nome:', value: "```"+`${sugestion}`+"```",inline: true},
+		{ name: 'Idade:', value: "```"+`${detail}`+"```", inline: true},
+		{ name: 'Minhas Stacks:', value: "```"+`${stack}`+"```"},
+		{ name: 'Sobre mim:', value: "```"+`${detalhes}`+"```"},
             )
-            .setColor(0xFFFF)
+            .setColor(0x564FCC)
             .setTimestamp()
             .setFooter({text: 'Equipe Risa Development'})
-            .setThumbnail('https://cdn.discordapp.com/attachments/1446566190217560254/1453563557596626994/logo.png?ex=694de80e&is=694c968e&hm=162e6e6b4003b160d8e0d8e3328d095344694063bb5b9e682eb37062852844a2&')
+            .setThumbnail(interaction.user.avatarURL({dynamic: true, size:1024}))
             .setImage('https://cdn.discordapp.com/attachments/1446566190217560254/1448807630133923850/unnamed.gif?ex=694dbe40&is=694c6cc0&hm=70f2f3f6b93a9731d71259f1d77d3ac8fa52138b06b5b067e81b4965bf7698e4&')
 
             const row = new ActionRowBuilder()

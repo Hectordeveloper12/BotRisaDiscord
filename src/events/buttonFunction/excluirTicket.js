@@ -9,7 +9,7 @@ module.exports = (client) =>{
                 const embedi = new EmbedBuilder()
                 .setTitle( 'Cancelar Ticket' )
                 .setDescription(`O chat atual sera excluido.`)
-                .setColor(0x763ee7)
+                .setColor(0x564FCC)
                 .setTimestamp()
                 .setFooter({text: 'Equipe Risa Development'})
 

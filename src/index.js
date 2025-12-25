@@ -2,7 +2,6 @@ require('dotenv').config();
 const { Client, IntentsBitField } = require('discord.js');
 const mongoose = require('mongoose');
 const eventHandler = require('./handlers/eventHandler');
-const modalSuggestion = require('./events/modals/modalSugesttion');
 const ticketMenu = require('./events/menuFunction/ticketMenu');
 const ticketMenu2 = require('./events/menuFunction/ticketMenu2');
 const ticketMenu3 = require('./events/menuFunction/ticketMenu3');
@@ -19,6 +18,10 @@ const timeoutModal = require('./events/modals/timeoutModal');
 const infoguild = require('./events/menuFunction/infoguildPainel');
 const infomember = require('./events/menuFunction/infomemberPainel');
 const infomemberModal = require('./events/modals/infomemberModal');
+const apresentarModal = require('./events/modals/modalApresentar');
+const cleanModal = require('./events/modals/cleanModal');
+const modalSay = require('./events/modals/modalSay');
+const modalSayNoEmbed = require('./events/modals/modalSayNoEmbed');
 
 const client = new Client({
     intents: [
@@ -42,7 +45,7 @@ const client = new Client({
         ticketMenu2(client);
         ticketMenu3(client);
         eventHandler(client);
-        modalSuggestion(client);
+        apresentarModal(client);
         respotaTicket(client);
         cancelarTicket(client);
         continuarTicket(client);
@@ -56,6 +59,9 @@ const client = new Client({
         infoguild(client);
         infomember(client);
         infomemberModal(client);
+        cleanModal(client);
+        modalSay(client);
+        modalSayNoEmbed(client);
 
         // Login do bot no Discord
         await client.login(process.env.TOKEN);

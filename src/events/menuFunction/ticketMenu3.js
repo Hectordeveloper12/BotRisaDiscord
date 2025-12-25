@@ -31,7 +31,7 @@ module.exports = (client) => {
             .addFields(
             { name: 'Responsável:', value: "```"+`A ser assumido`+"```", inline: true },
             )
-            .setColor(0x763ee7)
+            .setColor(0x564FCC)
             .setTimestamp()
             .setFooter({text: 'Equipe Risa Development'})
             .setThumbnail('https://cdn.discordapp.com/attachments/1446566190217560254/1453563557596626994/logo.png?ex=694de80e&is=694c968e&hm=162e6e6b4003b160d8e0d8e3328d095344694063bb5b9e682eb37062852844a2&')

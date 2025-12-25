@@ -17,7 +17,7 @@ module.exports = {
         const embedVarr = new EmbedBuilder()
         .setAuthor({name: 'RisaDev'})
         .setDescription(`Aqui está o avatar solicitado ${interaction.user}. [Clique aqui](${pessoa.avatarURL({dynamic: true, size:1024})}) para baixar a imagem ou use /ajuda para mais comandos.`)
-        .setColor(0x763ee7)
+        .setColor(0x564FCC)
         .setFooter({text: 'Equipe Risa Development'})
         .setImage(pessoa.avatarURL({dynamic: true, size:1024}))
         .setTimestamp()
