@@ -37,14 +37,6 @@ const client = new Client({
         await mongoose.connect(process.env.MONGODB_URI);
         console.log('Conectado ao Banco de dados');
 
-        // Registro de Comandos Globais
-
-        console.log('Comandos registrados globalmente com sucesso!');
-
-        // Inicia o express
-        app.listen(port, () => {
-            console.log(`app running`);
-        });
         // Eventos do Discord
         ticketMenu(client);
         ticketMenu2(client);

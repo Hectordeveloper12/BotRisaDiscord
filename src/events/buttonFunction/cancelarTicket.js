@@ -10,7 +10,7 @@ module.exports = (client) =>{
                 .setDescription(`${interaction.user}Você tem certeza que deseja cancelar esse ticket?`)
                 .setColor(0x763ee7)
                 .setTimestamp()
-                .setFooter({text: 'Equipe RisaDev'})
+                .setFooter({text: 'Equipe Risa Development'})
                 
                 const continuar = new ButtonBuilder()
                 .setCustomId('continuar')

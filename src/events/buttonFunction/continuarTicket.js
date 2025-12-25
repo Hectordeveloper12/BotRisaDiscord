@@ -11,7 +11,7 @@ module.exports = (client) =>{
                 .setDescription(`Iremos prosseguir com o atendimento... Aguarde o administrador entrar em contato.`)
                 .setColor(0x763ee7)
                 .setTimestamp()
-                .setFooter({text: 'Equipe RisaDev'})
+                .setFooter({text: 'Equipe Risa Development'})
 
                 await interaction.update({embeds: [embedi]});
                 await wait(1_000);

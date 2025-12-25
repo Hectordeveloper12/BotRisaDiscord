@@ -18,7 +18,7 @@ module.exports = {
         .setAuthor({name: 'RisaDev'})
         .setDescription(`Aqui está o avatar solicitado ${interaction.user}. [Clique aqui](${pessoa.avatarURL({dynamic: true, size:1024})}) para baixar a imagem ou use /ajuda para mais comandos.`)
         .setColor(0x763ee7)
-        .setFooter({text: 'Equipe RisaDev'})
+        .setFooter({text: 'Equipe Risa Development'})
         .setImage(pessoa.avatarURL({dynamic: true, size:1024}))
         .setTimestamp()
 

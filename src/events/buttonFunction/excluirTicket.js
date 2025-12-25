@@ -11,7 +11,7 @@ module.exports = (client) =>{
                 .setDescription(`O chat atual sera excluido.`)
                 .setColor(0x763ee7)
                 .setTimestamp()
-                .setFooter({text: 'Equipe RisaDev'})
+                .setFooter({text: 'Equipe Risa Development'})
 
                 await interaction.update({embeds: [embedi]});
                 await wait(1_000);
