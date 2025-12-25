@@ -12,7 +12,7 @@ module.exports =(client, interaction) => {
             .setTitle( `${title}` )
             .setDescription(`${description}`)
             .setTimestamp()
-            .setColor(0xFF5C00)
+            .setColor(0x564FCC)
             .setFooter({text: 'Equipe Risa Development'})
             
             interaction.reply({ content: 'Comando executado com sucesso!', ephemeral: true});
